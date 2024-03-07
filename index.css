@@ -3,7 +3,7 @@ body{
     padding: 0;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-.container{
+.container1{
     width: 100vw;
     height: 100vh;
     overflow: hidden;
@@ -24,7 +24,7 @@ body{
     min-height: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 10px;
 }
 .formtitle{
     position: relative;
@@ -33,13 +33,39 @@ body{
     width: 100%;
     padding: 10px 0;
     text-align: center;
+    background: linear-gradient(to top right, #07a49d, #d2ec0d);
+    -webkit-background-clip: text;
+    font-weight: 800;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
 }
 .formtitle::after{
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 1px;
+    height: 2px;
     width: 100%;
-    background: black;
+    background: linear-gradient(to right, #07a49d, #3eb688, #85d677, #aae26b);
+}
+.errorinput{
+    font-size: 12px;
+    line-height: 0;
+    color: red;
+    display: none;
+}
+.flexrow{
+    display: flex;
+    flex-direction: row;
+}
+.button{
+    height: 45px;
+    width: 100px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    background: linear-gradient(to right, #07a49d, #3eb688, #85d677, #aae26b);
 }
