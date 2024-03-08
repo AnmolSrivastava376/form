@@ -11,14 +11,14 @@
     <div class="container1">
         <div class="formbox">
             <div class="formtitle">Student Form</div>
-            <input type="text" class="form-control" placeholder="Enter your first name*">
+            <input type="text" class="form-control" placeholder="Enter your first name*" id="fname">
             <div class="errorinput" id="firstname">Invalid first name</div>
-            <input type="text" class="form-control" placeholder="Enter your last name*">
+            <input type="text" class="form-control" placeholder="Enter your last name*" id="lname">
             <div class="errorinput" id="lastname">Invalid last name</div>
-            <input type="number" class="form-control" placeholder="Enter your age*">
-            <div class="errorinput" id="age">Invalid age</div>
-            <input type="number" class="form-control" placeholder="Enter your roll number*">
-            <div class="errorinput" id="roll">Invalid roll no</div>
+            <input type="number" class="form-control" placeholder="Enter your age*" id="age">
+            <div class="errorinput" id="agemsg">Invalid age</div>
+            <input type="number" class="form-control" placeholder="Enter your roll number*" id="roll">
+            <div class="errorinput" id="rollno">Invalid roll no</div>
 
             <!-- <div class="flexrow">
                 <div style="margin-right: 10px;">Choose your gennder : </div>
@@ -31,12 +31,13 @@
                     <label class="form-check-label" for="inlineRadio2">Female</label>
                   </div>
             </div> -->
-            <select class="form-control">
+            <select class="form-control" id="gen">
                 <option>Male</option>
                 <option>Female</option>
-              </select>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your hobbies seperated by a comma"></textarea>
-            <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;">
+            </select>
+            <div id="hobbyarray"></div>
+            <textarea class="form-control" id="hobby" rows="3" placeholder="Enter your hobbies seperated by a comma"></textarea>
+            <div style="width: 100%; display: flex; justify-content: center; margin-top: 10px;" id="submit">
                 <div class="button">Submit</div>
             </div>
         </div>
