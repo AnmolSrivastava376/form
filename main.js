@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
         let sample=event.target.value;
         if(sample[sample.length-1]===','){
             var element = document.getElementById('hobbyarray')
+            element.innerHTML=""
+            splitString(sample).forEach((value)=>{
+                var paragraph=document.createElement("p")
+                paragraph.textContent=value
+                element.appendChild(paragraph)
+            })
         }
     })
 const handleClick = ()=>{
