@@ -5,8 +5,9 @@ body{
 }
 .container1{
     width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+    height: fit-content;
+    min-height: 100vh;
+    overflow-y: scroll;
     position: relative;
     background-image: url('./assets/sayangq6.jpg');
     background-position: center;
@@ -14,14 +15,39 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 1000px;
 }
-.formbox{
-    padding: 20px;
+.formcontainer{
+    position: absolute;
     width: 90%;
     max-width: 500px;
-    background: white;
     height: fit-content;
-    min-height: 500px;
+    min-height: 600px;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.formcontainer.rotate{
+    transform: rotateY(180deg);
+}
+.formbox{
+    position: absolute;
+    padding: 20px;
+    width: 100%;
+    background: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    backface-visibility: hidden;
+}
+.searchbox{
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    padding: 20px;
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -79,4 +105,31 @@ body{
     padding: 1px 4px;
     border-radius: 2px;
     border: 1px solid gray;
+}
+.switchprompt{
+    background: linear-gradient(to top right, #077570, #3eb688, #85d677, #aae26b);
+    width: fit-content;
+    height: 40px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.go{
+    background: linear-gradient(to top right, #077570, #3eb688, #85d677, #aae26b);
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.response{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
 }
