@@ -51,6 +51,27 @@ $(document).ready(function() {
         var age = $('#age');
         var gender = $('#gen');
         var hobby = $('#hobby');
+        if(fname.val()===""){
+            let err=$('#firstname')
+            err[0].style.display="block"
+            return
+        }
+        if(lname.val()===""){
+            let err=$('#lastname')
+            err[0].style.display="block"
+            return
+        }
+        if(age.val()==""){
+            let err=$('#agemsg')
+            err[0].style.display="block"
+            return
+        }
+        if(roll.val()==""){
+            let err=$('#rollno')
+            err[0].style.display="block"
+            return
+        }
+        
         const studentObj = {
             firstName: fname.val(),
             lastLame: lname.val(),
@@ -60,11 +81,12 @@ $(document).ready(function() {
             hobby: splitString(hobby.val())
         }
         sampleData.push(studentObj);
+        alert("Data submitted")
         fname.val("");
         lname.val("");
         roll.val("");
         age.val("");
-        gender.val("");
+        gender.val("Male");
         hobby.val("");
         $('#hobbyarray').empty();
     }
@@ -73,4 +95,9 @@ $(document).ready(function() {
     $('#switch').click(handleSwitch);
     $('#switchback').click(handleSwitch);
     $('#go').click(handleSearch);
+
+    $('#fname').click(()=>{$('#firstname')[0].style.display="none"})
+    $('#lname').click(()=>{$('#lastname')[0].style.display="none"})
+    $('#age').click(()=>{$('#agemsg')[0].style.display="none"})
+    $('#roll').click(()=>{$('#rollno')[0].style.display="none"})
 });
